@@ -1,7 +1,6 @@
-
 function converterRome(s) {
-    
-    if (s.length < 1 && s.length > 15) return alert("bad length");
+    if (!/^[IVXLCDMZ]+$/i.test(s)) return alert ('not roman')    
+    if (s.length < 1 || s.length > 15) return alert("bad length");
     let n;
     let i = 0;
     let result = 0;
@@ -69,8 +68,6 @@ function converterRome(s) {
             result += n;
           }
       }
+      if ((result < 1) || (result > 3999)) { return alert('Roman not in range')}
       return result
 }
-console.log(converterRome(X));
-
-
