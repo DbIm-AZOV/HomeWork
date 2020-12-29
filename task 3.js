@@ -1,6 +1,5 @@
-
 function bracketShow(s){
- 
+  if (!/^[\[\](){}]+$/i.test(s)) return alert ('not bracket')
   let last;
   let stack = [];
   let index;
